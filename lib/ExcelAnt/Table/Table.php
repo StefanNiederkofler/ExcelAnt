@@ -380,6 +380,10 @@ class Table implements TableInterface
 
             if (null !== $styles) {
                 $cell->setStyles($styles);
+            } elseif (is_float($value)) {
+                $cell->setStyles(new StyleCollection([(new Format())->setFormat(Format::TYPE_NUMERIC_00)]));
+            } elseif (is_numeric($value)) {
+                $cell->setStyles(new StyleCollection([(new Format())->setFormat(Format::TYPE_NUMERIC)]));
             }
 
             $this->table[$index][] = $cell;
