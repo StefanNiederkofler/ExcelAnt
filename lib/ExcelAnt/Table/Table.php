@@ -8,6 +8,7 @@ use ExcelAnt\Table\TableInterface,
     ExcelAnt\Cell\Cell,
     ExcelAnt\Cell\EmptyCell,
     ExcelAnt\Collections\StyleCollection,
+    ExcelAnt\Style\Format,
     ExcelAnt\Traits\Coordinable;
 
 class Table implements TableInterface
